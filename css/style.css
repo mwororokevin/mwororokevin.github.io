@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-section {
+    height: 50px;
+    width: 100vw;
+    background-color: #060542;
+    border-bottom: 3px solid red;
+}
