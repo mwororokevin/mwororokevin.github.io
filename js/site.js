@@ -178,13 +178,13 @@ function toTheTop() {
  * 
  */
 
-let popupBtn = document.getElementById("tzagents");
-let modal = document.getElementById("popup");
-let closeBtn = document.getElementById("close");
+// let popupBtn = document.getElementById("tzagents");
+// let modal = document.getElementById("popup");
+// let closeBtn = document.getElementById("close");
 
-popupBtn.onclick = function(event) {
-    modal.style.display = "block";
-}
+// popupBtn.onclick = function(event) {
+//     modal.style.display = "block";
+// }
 
 // window.onclick = function(event) {
 //     if(event.target == modal) {
