@@ -3,16 +3,165 @@
     <head>
         <title></title>
         <meta charset="UTF-8">
+        <link rel="icon" href="/images/kmm-logo.ico" type="image/gif" sizes="16x16">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="/css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     </head>
     <body>
         <nav class="nav-section">
-
-        </nav>
-        <div id="landing-page">
-
+            <div class="logo">
+                <img src="/images/kmm-logo.ico" alt="">
+            </div>
+            <div class="nav-menu-items">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <!-- <li><a href="#about">About</a></li> -->
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div id="burger-menu" class="burger-section" onclick="toggleMobileMenu()">
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+            </div>
+        </nav>        
+        <div id="mobile-section-menu" class="mobile-menu" style="display: none;">
+            <ul class="section-link">
+                <li><a href="#home">Home</a></li>
+                <!-- <li><a href="#about">About</a></li> -->
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="social-section">
+                <ul>
+                    <a href="https://github.com/mwororokevin"><i class="fab fa-github"></i></a>
+                    <a href="https://codepen.io/mwororokevin"><i class="fab fa-codepen"></i></a>
+                    <a href="https://www.facebook.com/people/Kevin-Mwororo/100018458587804"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com/KMwororo"><i class="fab fa-twitter"></i></a>
+                    <!-- <a href="#"><i class="fab fa-linkedin"></i></a> -->
+                </ul>
+            </div>
         </div>
+        <div class="canvas-section">
+            <canvas id="field"></canvas>
+            <div class="intro-cover">
+                <div class="top">
+                    <div class="intro-text">
+                        <p>Hi, I'm <span>Kevin Mwororo</span>.</p>
+                        <p>I'am a self tought full stack developer.</p>
+                    </div>
+                    <div class="view-portfolio">
+                        <a href="#portfolio">View my Portfolio</a>
+                    </div>
+                </div>
+            </div>            
+        </div>        
+        <div id="portfolio" class="portfolio-section">
+            <h2>Projects</h2>
+            <div class="section-divider"></div>
+            <div class="project-gallery">
+                <div class="portfolio-item">
+                    <img src="/images/tzagents/hometzagents.png">
+                    <div class="project-summary">
+                        <div class="summary-text">
+                            <h4>tanganyika estate agents</h4>
+                            <span>Custom WordPress Theme</span>
+                        </div>
+                        <div class="btn">
+                            <a id="tzagents" href="https://tzagents.com">LEARN MORE</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="/images/cegkenya/homeceg.png">
+                    <div class="project-summary">
+                        <div class="summary-text">
+                            <h4>centre for economic governance</h4>
+                            <p>Custom WordPress Theme</p>
+                        </div>
+                        <div class="btn">
+                            <a id="tzagents" href="https://cegkenya.org">LEARN MORE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="contact" class="contact">
+            <div class="contact-section">
+                <h2>Contact Me</h2>
+                <div class="section-divider"></div>
+                <form action="">
+                    <div><input placeholder="Name" type="text" name="name" required></div>
+                    <div><input placeholder="Enter Email" type="email" name="email" required></div>
+                    <div><textarea placeholder="Your Message" type="text" name="name" required></textarea></div>
+                    <div class="sucess-message">
+                        "Your Message was sent."
+                    </div>
+                    <div class="submit-section">
+                        <input type="submit" name="" value="Leave a Message" id="submit" class="submit-btn">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <div class="social-section">
+                <ul>
+                    <a href="https://github.com/mwororokevin"><i class="fab fa-github"></i></a>
+                    <a href="https://codepen.io/mwororokevin"><i class="fab fa-codepen"></i></a>
+                    <a href="https://www.facebook.com/people/Kevin-Mwororo/100018458587804"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com/KMwororo"><i class="fab fa-twitter"></i></a>
+                    <!-- <a href="#"><i class="fab fa-linkedin"></i></a> -->
+                </ul>
+            </div>
+            <div class="copy-section">
+                <p>
+                    Mwororo Kevin &copy; <span id="year-span"></span>.
+                </p>
+            </div>
+        </footer>
+        <div id="popup" class="popup-modal">
+            <div class="popup-content">
+                <div class="top-content">
+                    <div class="slide-show">
+                        <div class="slide">
+                            <img src="images/tzagents/hometzagents.png" alt="">
+                        </div>
+                        <div class="next-button">
+                            <button id="next-btn" class="slider-btn">&#10095;</button>
+                        </div>
+                        <div class="prev-button">
+                            <button id="prev-btn" class="slider-btn">&#10094;</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-divider"></div>
+                <div class="bottom-content">
+                    <div class="title-tag">
+                        <h3>Tanganyika Estate Agents</h3>
+                    </div>
+                    <div class="summary">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                            Amet voluptas est, quod dignissimos ab, vitae veritatis sed 
+                            harum sunt odit blanditiis laboriosam maiores asperiores 
+                            pariatur possimus veniam. Hic, accusamus iusto?
+                        </p>
+                    </div>
+                    <div class="view">
+                        <a href="#" target="_blank">View Site</a>
+                    </div>                    
+                    <div class="close">
+                        <span id="close">&#10006;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button id="scroll-to-top" onclick="toTheTop()">
+            <i class="fas fa-angle-double-up"></i>
+        </button>
+        <script src="/js/site.js"></script>
     </body>
 </html>
-
