@@ -283,7 +283,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
 }
 
-.portfolio-item .project-summary .btn button,
+.portfolio-item .project-summary .btn a,
 .popup-modal .popup-content .bottom-content .view button {
     width: 170px;
     margin: 0 auto;
@@ -297,7 +297,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: 1.0s;
 }
 
-.portfolio-item .project-summary .btn button:hover,
+.portfolio-item .project-summary .btn a:hover,
 .popup-modal .popup-content .bottom-content .view a:hover {
     color: whitesmoke;
     background-color: #444444;
