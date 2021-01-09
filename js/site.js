@@ -15,14 +15,20 @@ window.onload = returnCurrentYear;
  */
 
 let mobileMenu = document.getElementById("mobile-section-menu");
+let closeMenu = document.getElementById("close-entity");
+let burgerMenu = document.getElementById("burger");
 
 function toggleMobileMenu() {
     let displayValue = mobileMenu.style.display;
 
     if(displayValue == 'none') {
         mobileMenu.style.display = "block";
+        burgerMenu.style.display = "none";
+        closeMenu.style.display = "block";
     } else {
         mobileMenu.style.display = "none";
+        closeMenu.style.display = "none";
+        burgerMenu.style.display = "block";
     }
 }
 
@@ -55,6 +61,7 @@ let starIndex = 0;
 let numStars = 0;
 let acceleration = 1;
 let starsToDraw = (field.width * field.height) / 200;
+let randomStarColors = ["#F7971E", "#FFD200", "#34e89e", "#A7BFE8", "#6f0000"];
 
 if (getUrlParameter("stars")) {
   starsToDraw = getUrlParameter("stars");
@@ -66,33 +73,35 @@ if (getUrlParameter("accel")) {
 
 
 function Star() {
-    this.X = field.width / 2;
-    this.Y = field.height / 2;
+  this.X = field.width / 2;
+  this.Y = field.height / 2;
 
-    this.SX = Math.random() * 10 - 5;
-    this.SY = Math.random() * 10 - 5;
+  this.SX = Math.random() * 10 - 5;
+  this.SY = Math.random() * 10 - 5;
 
-    let start = 0;
+  let start = 0;
 
-    if (field.width > field.height)
-        start = field.width;
-    else
-        start = field.height;
+  if (field.width > field.height)
+    start = field.width;
+  else
+    start = field.height;
 
-    this.X += this.SX * start / 10;
-    this.Y += this.SY * start / 10;
+  this.X += this.SX * start / 10;
+  this.Y += this.SY * start / 10;
 
-    this.W = 1;
-    this.H = 1;
+  this.W = Math.random() * 3;
+  this.H = Math.random() * 3;
 
-    this.age = 0;
-    this.dies = 500;
+  this.age = 0;
+  this.dies = 500;
 
-    starIndex++;
-    stars[starIndex] = this;
+  starIndex++;
+  stars[starIndex] = this;
 
-    this.ID = starIndex;
-    this.C = "#f5deb3";
+  this.ID = starIndex;
+
+  let randomColorIndex = parseInt(Math.random() * 10 - 5);
+  this.C = randomStarColors[randomColorIndex];
 }
 
 Star.prototype.Draw = function () {
@@ -178,13 +187,13 @@ function toTheTop() {
  * 
  */
 
-// let popupBtn = document.getElementById("tzagents");
-// let modal = document.getElementById("popup");
-// let closeBtn = document.getElementById("close");
+let popupBtn = document.getElementById("tzagents");
+let modal = document.getElementById("popup");
+let closeBtn = document.getElementById("close");
 
-// popupBtn.onclick = function(event) {
-//     modal.style.display = "block";
-// }
+popupBtn.onclick = function(event) {
+    modal.style.display = "block";
+}
 
 // window.onclick = function(event) {
 //     if(event.target == modal) {
