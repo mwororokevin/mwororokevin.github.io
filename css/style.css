@@ -3,8 +3,16 @@
     padding: 0;
 }
 
-body {
-    
+body p {
+    font-family: 'Nunito', sans-serif;
+}
+
+p {
+    line-height: 30px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito', sans-serif;
 }
 
 .nav-section {
@@ -50,6 +58,7 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 1.5px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .nav-section .burger-section {
@@ -158,6 +167,7 @@ body {
     border-bottom: 4px solid transparent;
     cursor: pointer;
     transition: 1.0s;
+    font-weight: 'Modak', cursive;
 }
 
 .top p span:hover {
@@ -294,6 +304,68 @@ body {
     border: solid 2px #44444400;
 }
 
+.about-me {
+    padding: 50px 0;
+    background: linear-gradient(50deg, #FFEFBA, rgb(184, 179, 179));
+}
+
+.about-me h2,
+p, h3 {
+    color: #444;
+}
+
+.about-section {
+    margin: 0 0 20px 0;
+}
+
+.about-section p {
+    font-size: 18px;
+    margin: 0 5px 10px 5px;
+    text-align: center;
+}
+
+.about-section p a {
+    text-decoration: none;
+    color: #111;
+    font-weight: bolder;
+    border-bottom: 2.5px solid transparent;
+    padding-bottom: 2.5px;
+    font-family: 'Yusei Magic', sans-serif;
+    transition: 1.0s;
+}
+
+.about-section p a:hover {
+    border-bottom-color: #FF8C00;
+}
+
+.about-me .social-section {
+    margin: 40px 0 0 0;
+}
+
+.title-section h3 {
+    text-align: center;
+    font-size: 1.8em;
+    color: whitesmoke;
+    margin: 15px 0 15px 0;
+}
+
+.about-me .dev-photos {
+    text-align: center;
+}
+
+.about-me .dev-photos:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.about-me .dev-photos img {
+    width: 250px;
+    height: auto;
+    border: 2.5px solid;
+    border-radius: 10px 10px 10px 10px;
+}
+
 .contact {
     background: linear-gradient(50deg, #000000, #434343);
     color: wheat;
@@ -307,7 +379,8 @@ body {
 }
 
 .contact-section h2,
-.portfolio-section h2 {
+.portfolio-section h2,
+.about-me h2 {
     text-align: center;
     font-size: 30px;
     text-transform: uppercase;
@@ -634,7 +707,9 @@ footer {
         padding: 0 25px;
     }
 
-    .project-gallery {
+    .project-gallery,
+    .about-section,
+    .dev-photos {
         margin: 0 auto;
         width: 90%;
     }
@@ -690,7 +765,9 @@ footer {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .project-gallery {
+    .project-gallery,
+    .about-section,
+    .dev-photos {
         margin: 0 auto;
         width: 60%;
     }
@@ -719,7 +796,9 @@ footer {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    .project-gallery {
+    .project-gallery,
+    .about-section,
+    .dev-photos {
         margin: 0 auto;
         width: 60%;
     }
